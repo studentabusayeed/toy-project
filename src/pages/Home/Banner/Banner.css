@@ -1,0 +1,13 @@
+.banner {
+    background-color: rgb(199, 194, 202);
+}
+
+@media (max-width: 576px) {
+    .banner-container img {
+        width: 100%;
+    }
+
+    .hello {
+        flex-direction: column;
+    }
+}
