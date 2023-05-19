@@ -18,10 +18,10 @@ const Navbar = () => {
 
     const Menu = <>
         <li><Link className='font-semibold' to="/">Home</Link></li>
-        <li><Link className='font-semibold' to="/allToys">All Toys</Link></li>
-        {user?.email ? <li><Link className='font-semibold' to="/about">My Toys</Link></li> : ''}
-        {user?.email ?<li><Link className='font-semibold' to="/addToy">Add A Toy</Link></li>: ''}
-        <li><Link className='font-semibold' to="/about">Blogs</Link></li>
+        <li><Link className='font-semibold ml-2' to="/allToys">All Toys</Link></li>
+        {user?.email ? <li><Link className='font-semibold ml-2' to="/myToy">My Toys</Link></li> : ''}
+        {user?.email ?<li><Link className='font-semibold ml-2' to="/addToy">Add A Toy</Link></li>: ''}
+        <li><Link className='font-semibold ml-2' to="/blog">Blogs</Link></li>
         {user?.email ? <>
             <img className={user.photoURL ? 'img-menu' : ''} title={user?.displayName} src={user?.photoURL
             } alt="" />
