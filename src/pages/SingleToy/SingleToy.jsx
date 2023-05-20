@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { FaStar } from 'react-icons/fa';
 
 const SingleToy = () => {
     const toys = useLoaderData();
@@ -19,7 +20,7 @@ const SingleToy = () => {
                         <h4 className='text-1xl font-semibold mt-2 ml-8'>Toy Name:{category}</h4>
                         <h4 className='text-1xl font-semibold mt-2 ml-8'>Email: {email}</h4>
                         <p className='text-1xl font-semibold mt-2 ml-8'>Price: {price}</p>
-                        <p className='text-1xl font-semibold mt-2 ml-8'>Rating: {rating}</p>
+                        <p className='text-1xl font-semibold mt-2 ml-8'>Rating:<FaStar className='text-warning inline ml-2'/><FaStar className='text-warning inline'/> <FaStar className='text-warning inline mr-2'/>  {rating}</p>
                         <p className='text-1xl font-semibold mt-2 ml-8'>Available quantity: {quantity}</p>
                         <p className='text-1xl font-semibold mt-2 ml-8'>Description: {description}</p>
                     </div>

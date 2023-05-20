@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './SubCategory.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { FaStar } from 'react-icons/fa';
 
 const SubCategory = ({ data }) => {
     const { user } = useContext(AuthContext);
@@ -15,8 +16,8 @@ const SubCategory = ({ data }) => {
             <figure><img src={photo} alt="Shoes" /></figure>
             <div className="card-body border-t-2">
                 <h2 className='text-2xl font-bold text-start'>Name: {sellerName}</h2>
-                <p className='text-1xl font-semibold text-start'>Price: {price}</p>
-                <p className='text-1xl font-semibold text-start'>Rating: {rating}</p>
+                <p className='text-1xl font-semibold text-start'>Price: ${price}</p>
+                <p className='text-1xl font-semibold text-start'>Rating:<FaStar className='text-warning inline ml-2'/><FaStar className='text-warning inline'/> <FaStar className='text-warning inline mr-2'/>  {rating}</p>
                 <div className="card-actions justify-end">
                     <Link to={user && `/toy/${_id}`}>
                         <button className="btn btn-secondary">View Details</button>
