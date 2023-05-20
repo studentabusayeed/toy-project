@@ -12,7 +12,7 @@ const Gallery = () => {
             <div className='flex justify-center'>
                 <div className="divider w-1/2"></div>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center my-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-items-center my-5 bg-slate-200 p-20 rounded'>
                 {
                     users.map(user => <Galleryimg
                     key={user.id}
