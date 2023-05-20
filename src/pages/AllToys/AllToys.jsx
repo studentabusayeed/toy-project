@@ -14,6 +14,7 @@ const AllToys = () => {
                     <thead>
                         <tr>
                             <th>
+                                Image
                             </th>
                             <th>Seller</th>
                             <th>Toy Name</th>
