@@ -30,3 +30,20 @@
     width: 120px;
     height: 35px;
 }
+
+@media (max-width: 576px) {
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }    
+    .logo-title {
+        font-size: 32px;
+    }
+    .logo-description {
+        font-weight: bold;
+    }
+    .logo-section {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
