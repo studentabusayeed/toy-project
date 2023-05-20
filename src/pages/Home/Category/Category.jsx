@@ -27,14 +27,14 @@ const Category = () => {
                 <div className="divider w-1/2"></div>
             </div>
             <Tabs className="text-center">
-                <TabList className="font-bold pt-2 mb-4 bg-cyan-400 text-white">
+                <TabList className="font-bold py-4 pt-2 bg-cyan-400 text-white">
                     <Tab onClick={() => handleTabClick('car')}>Car</Tab>
                     <Tab onClick={() => handleTabClick('truck')}>Truck</Tab>
                     <Tab onClick={() => handleTabClick('police')}>Police Car</Tab>
                 </TabList>
 
                 <TabPanel>
-                    <div className='md:flex gap-6 justify-center my-10'>
+                    <div className='md:flex gap-6 justify-center bg-slate-200 px-20 py-10'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}
@@ -44,7 +44,7 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='md:flex gap-6 justify-center my-10'>
+                    <div className='md:flex gap-6 justify-center bg-slate-200 px-20 py-10'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}
@@ -54,7 +54,7 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='md:flex gap-6 justify-center my-10'>
+                    <div className='md:flex gap-6 justify-center bg-slate-200 px-20 py-10'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}

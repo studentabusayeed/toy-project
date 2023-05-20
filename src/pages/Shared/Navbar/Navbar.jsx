@@ -25,10 +25,10 @@ const Navbar = () => {
         {user?.email ? <>
             <img className={user.photoURL ? 'img-menu' : ''} title={user?.displayName} src={user?.photoURL
             } alt="" />
-            <li><button className='font-semibold btn btn-primary text-white mx-2' onClick={handleLogout}>Log out</button></li>
+            <li><button className='font-semibold bg-blue-600 px-5 py-1 rounded-lg flex items-center text-white mx-2' onClick={handleLogout}>Log out</button></li>
         </> :
-            <Link className='font-semibold btn btn-primary text-white mx-2' to="/login">Login</Link>}
-        <Link className='font-semibold btn btn-primary text-white' to="/register">Register</Link>
+            <Link className='font-semibold bg-blue-600 px-5 py-1 rounded-lg flex items-center text-white mx-2' to="/login">Login</Link>}
+        <Link className='font-semibold bg-blue-600 px-5 py-1 rounded-lg flex items-center text-white' to="/register">Register</Link>
     </>
 
     return (
