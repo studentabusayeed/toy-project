@@ -14,9 +14,6 @@ const AllToys = () => {
                     <thead>
                         <tr>
                             <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
                             </th>
                             <th>Seller</th>
                             <th>Toy Name</th>
