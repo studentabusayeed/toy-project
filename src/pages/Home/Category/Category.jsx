@@ -9,7 +9,7 @@ const Category = () => {
     console.log(datas);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allCategory/${activeTab}`)
+        fetch(`https://toy-project-server.vercel.app/allCategory/${activeTab}`)
             .then((res) => res.json())
             .then((result) => {
                 setDatas(result);
@@ -34,7 +34,7 @@ const Category = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='md:flex gap-6 justify-center bg-slate-200 px-20 py-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 px-56'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}
@@ -44,7 +44,7 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='md:flex gap-6 justify-center bg-slate-200 px-20 py-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 px-56'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}
@@ -54,7 +54,7 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='md:flex gap-6 justify-center bg-slate-200 px-20 py-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 px-56'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}

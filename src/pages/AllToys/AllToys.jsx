@@ -3,7 +3,7 @@ import AllToysRow from './AllToysRow';
 
 const AllToys = () => {
     const [toys, setToys] = useState([]);
-    fetch('http://localhost:5000/toys')
+    fetch('https://toy-project-server.vercel.app/toys')
         .then(res => res.json())
         .then(data => setToys(data));
     return (
