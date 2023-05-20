@@ -34,7 +34,7 @@ const Category = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 px-56'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 md:px-60'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}
@@ -44,7 +44,7 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 px-56'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 md:px-60'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}
@@ -54,7 +54,7 @@ const Category = () => {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 px-56'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center bg-slate-200 py-10 md:px-60'>
                         {
                             datas.map(data => <SubCategory
                                 key={data._id}

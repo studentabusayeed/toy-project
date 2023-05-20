@@ -11,7 +11,7 @@ const SubCategory = ({ data }) => {
     const from = location.state?.from?.pathname || '/';
     const { photo, _id, description, rating, price, sellerName } = data;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl category-img">
+        <div className="card w-80 bg-base-100 shadow-xl category-img mb-4">
             <figure><img src={photo} alt="Shoes" /></figure>
             <div className="card-body border-t-2">
                 <h2 className='text-2xl font-bold text-start'>Name: {sellerName}</h2>
