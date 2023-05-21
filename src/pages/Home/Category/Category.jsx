@@ -5,7 +5,7 @@ import SubCategory from '../SubCategory/SubCategory';
 
 const Category = () => {
     const [datas, setDatas] = useState([]);
-    const [activeTab, setActiveTab] = useState("");
+    const [activeTab, setActiveTab] = useState("car");
     console.log(datas);
 
     useEffect(() => {
