@@ -4,7 +4,6 @@ import { FaStar } from 'react-icons/fa';
 
 const SingleToy = () => {
     const toys = useLoaderData();
-    console.log(toys);
     const { photo, name, category, sellerName, price, quantity, email, rating, description } = toys;
     return (
         <div>

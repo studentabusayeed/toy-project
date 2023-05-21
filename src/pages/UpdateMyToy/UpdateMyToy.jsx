@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 const UpdateMyToy = () => {
     const data = useLoaderData();
     const { price, description, quantity, _id } = data;
-    console.log(data);
 
     const handleUpdate= event => {
         event.preventDefault();
@@ -16,7 +15,6 @@ const UpdateMyToy = () => {
         const description = form.description.value;
 
         const updatedToy = { price, quantity, description };
-        console.log(updatedToy);
 
         // send data to the server side
         fetch(`https://toy-project-server.vercel.app/toys/${_id}`, {

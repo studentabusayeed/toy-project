@@ -6,7 +6,6 @@ import SubCategory from '../SubCategory/SubCategory';
 const Category = () => {
     const [datas, setDatas] = useState([]);
     const [activeTab, setActiveTab] = useState("car");
-    console.log(datas);
 
     useEffect(() => {
         fetch(`https://toy-project-server.vercel.app/allCategory/${activeTab}`)
