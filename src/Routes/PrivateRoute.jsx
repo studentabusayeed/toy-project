@@ -10,11 +10,11 @@ const PrivateRoute = ({children}) => {
         return <progress className="progress w-56"></progress>
     }
 
-    if (user?.email) {
+    if (user) {
         return children;
     }
 
-    return <Navigate to="/login" state={{ from: location }} replace></Navigate>
+    return <Navigate to="/login" state={{from: location}} replace={true}></Navigate>
 };
 
 export default PrivateRoute;
