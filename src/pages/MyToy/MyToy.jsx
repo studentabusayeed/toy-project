@@ -5,13 +5,14 @@ import Swal from 'sweetalert2';
 
 const MyToy = () => {
     const { user } = useContext(AuthContext);
+    const [asc, setAsc] = useState(true);
     const [toys, setToys] = useState([]);
-    const url = `https://toy-project-server.vercel.app/myToys?email=${user?.email}`;
+    const url = `https://toy-project-server.vercel.app/myToys?email=${user?.email}&sort=${asc ? 'asc' : 'desc'}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(data => setToys(data));
-    }, [url]);
+    }, [url, asc]);
 
 
     const handleDelete = id => {
@@ -38,6 +39,12 @@ const MyToy = () => {
 
     return (
         <div className='my-5'>
+            <div className='text-center mb-5'>
+                <button
+                    className="btn btn-secondary"
+                    onClick={() => setAsc(!asc)}
+                >{asc ? 'Short Price: High to Low' : 'Short Price: Low to High'}</button>
+            </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}

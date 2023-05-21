@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyToy from "../pages/MyToy/MyToy";
 import Blog from "../pages/Blog/Blog";
 import UpdateMyToy from "../pages/UpdateMyToy/UpdateMyToy";
+import ViewDetails from "../pages/Home/ViewDetails/ViewDetails";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
             {
                 path: 'toy/:id',
                 element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
+                loader: ({params}) => fetch(`https://toy-project-server.vercel.app/toys/${params.id}`)
+            },
+            {
+                path: 'singleDetails/:id',
+                element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`https://toy-project-server.vercel.app/toys/${params.id}`)
             },
             {

@@ -13,7 +13,7 @@ const SubCategory = ({ data }) => {
                 <p className='text-1xl font-semibold text-start'>Price: ${price}</p>
                 <p className='text-1xl font-semibold text-start'>Rating:<FaStar className='text-warning inline ml-2'/><FaStar className='text-warning inline'/> <FaStar className='text-warning inline mr-2'/>  {rating}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/toy/${_id}`}>
+                    <Link to={`/singleDetails/${_id}`}>
                         <button className="btn btn-secondary">View Details</button>
                     </Link>
                 </div>
