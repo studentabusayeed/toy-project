@@ -18,7 +18,7 @@ const UpdateMyToy = () => {
         const updatedToy = { price, quantity, description };
         console.log(updatedToy);
 
-        // send data to the server
+        // send data to the server side
         fetch(`https://toy-project-server.vercel.app/toys/${_id}`, {
             method: "PUT",
             headers: {

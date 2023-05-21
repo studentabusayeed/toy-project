@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AllToysRow from './AllToysRow';
 
 const AllToys = () => {
     const [toys, setToys] = useState([]);
     const [searchText, setSearchText] = useState("");
-    fetch('https://toy-project-server.vercel.app/toys')
-        .then(res => res.json())
-        .then(data => setToys(data));
+    useEffect(() => {
+        fetch('https://toy-project-server.vercel.app/toys')
+            .then(res => res.json())
+            .then(data => setToys(data));
+    }, []);
 
     const handleSearch = () => {
         fetch(`https://toy-project-server.vercel.app/getByText/${searchText}`)
